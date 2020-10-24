@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Assignment2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="roll">Roll</string>
+    <string name="roll_result">Roll Result</string>
+    <string name="cat_mew">Mew</string>
+    <string name="urgent">Urgent</string>
+    <string name="sheridan">Chen Tong</string>
+    <string name="history">History</string>
+    <string name="count">%1$d.</string>
+    <string name="action_clear">Clear</string>
+    <string name="DiceSum">6</string>
+    <string name="DiceThree">3</string>
+    <string name="DiceTwo">2</string>
+    <string name="DiceOne">1</string>
+    <string name="confirmation_dialogs">Confirmation Dialog</string>
+    <string name="confirm_clear_title">Confirm Clear</string>
+    <string name="confirm_clear_on">Ask to confirm clearing the history</string>
+    <string name="confirm_clear_off">Don\'t ask to confirm clearing the data</string>
+    <string name="empty">_</string>
+    <plurals name="history_total">
+        <item quantity="one">History Total: %1%d message</item>
+        <item quantity="other">History Total: %1$d messages</item>
+    </plurals>
+</resources>

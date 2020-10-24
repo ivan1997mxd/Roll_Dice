@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/rollerFragment">
+
+    <fragment
+        android:id="@+id/rollerFragment"
+        android:name="sheridan.tongche.assignment2.ui.roller.RollerFragment"
+        android:label="fragment_roller"
+        tools:layout="@layout/fragment_roller" >
+        <action
+            android:id="@+id/action_rollerFragment_to_histroyFragment"
+            app:destination="@id/histroyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/histroyFragment"
+        android:name="sheridan.tongche.assignment2.ui.history.HistroyFragment"
+        android:label="fragment_histroy"
+        tools:layout="@layout/fragment_histroy" >
+        <action
+            android:id="@+id/action_histroyFragment_to_rollerFragment"
+            app:destination="@id/rollerFragment" />
+        <action
+            android:id="@+id/action_histroyFragment_to_confirmation_dialog"
+            app:destination="@id/confirmation_dialog" />
+    </fragment>
+    <dialog
+        android:id="@+id/confirmation_dialog"
+        android:name="sheridan.tongche.assignment2.ui.dialog.ConfirmationDialog"
+        android:label="ConfirmationDialog" >
+        <argument
+            android:name="message"
+            app:argType="string" />
+        <argument
+            android:name="requestCode"
+            app:argType="integer" />
+    </dialog>
+</navigation>

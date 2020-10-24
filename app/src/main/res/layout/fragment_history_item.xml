@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="sheridan.tongche.assignment2.ui.database.Dicedata"/>
+        <variable
+            name="dicedata"
+            type="Dicedata" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/count"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="@dimen/double_margin"
+            android:layout_marginBottom="@dimen/margin"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="3."/>
+
+        <TextView
+            android:id="@+id/DiceOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin"
+            android:text="@{Integer.toString(dicedata.dice_one) + '+'}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintBaseline_toBaselineOf="@id/count"
+            app:layout_constraintStart_toEndOf="@id/count"
+            tools:text="@string/DiceOne" />
+
+
+
+        <TextView
+            android:id="@+id/DiceTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(dicedata.dice_two) + '+'}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintBaseline_toBaselineOf="@id/DiceOne"
+            app:layout_constraintStart_toEndOf="@id/DiceOne"
+            tools:text="@string/DiceTwo" />
+
+        <TextView
+            android:id="@+id/DiceThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(dicedata.dice_three) + '='}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintBaseline_toBaselineOf="@id/DiceTwo"
+            app:layout_constraintStart_toEndOf="@id/DiceTwo"
+            tools:text="@string/DiceThree" />
+
+        <TextView
+            android:id="@+id/DiceSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{Integer.toString(dicedata.sum)}"
+            android:textAppearance="?attr/textAppearanceListItem"
+            app:layout_constraintBaseline_toBaselineOf="@id/DiceThree"
+            app:layout_constraintStart_toEndOf="@id/DiceThree"
+            tools:text="@string/DiceSum" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
